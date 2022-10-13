@@ -1,0 +1,15 @@
+.card-container {
+  box-shadow: 1px 4px 4px 2px rgb(0 0 0 / 25%);
+  transition: all 0.2s;
+}
+.card-container:hover {
+  border: 1px solid #7e1cfe;
+  color: #7e1cfe;
+  box-shadow: 3px 3px 30px #ccc;
+}
+.cards-container {
+  display: flex;
+  gap: 46px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
