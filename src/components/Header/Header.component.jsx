@@ -1,7 +1,12 @@
 import rethinkLogo from '../../Assets/rethinkLogo.svg';
 import retink from '../../Assets/Retink.svg';
 import retinkAvater from '../../Assets/Retink-avatar.svg';
+import { signInWithGooglePopup } from '../../Utils/Firebase/Firebase.utils';
 const Header = () => {
+  const signInWithGoogle = async () => {
+    const response = await signInWithGooglePopup();
+    console.log('respn', response);
+  };
   return (
     <div style={{ backgroundColor: 'rgba(126, 28, 254, 0.05)' }}>
       <div className='flex flex-wrap lg:ml-[153px] sm:mx-auto sm:max-w-md md:mx-auto md:max-w-lg lg:mx-0 lg:max-w-none pt-[61.25px]'>
@@ -59,10 +64,14 @@ const Header = () => {
                   <button
                     type='submit'
                     className='bg-[#7E1CFE] text-white md:px-[15px] sm:px-[45px] lg:px-[85px]  rounded-3xl md:py-2 sm:py-2 lg:py-5 font-[500] sm:text-[16px] md:text-[11px] lg:text-[21px] leading-[34px] md:mr-8 lg:mr-0 md:w-28 lg:w-fit btn'
+                    onClick={signInWithGoogle}
                   >
                     Notify me
                   </button>
-                  <button className='border-[#7E1CFE] border-2 sm:px-[12px] sm:ml-3 md:ml-0 md:px-[20px] lg:px-[50px] rounded-3xl lg:py-3 font-[500] sm:text-[13px] md:text-[16px] lg:text-[21px] lg:leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signup signupLink'>
+                  <button
+                    className='border-[#7E1CFE] border-2 sm:px-[12px] sm:ml-3 md:ml-0 md:px-[20px] lg:px-[50px] rounded-3xl lg:py-3 font-[500] sm:text-[13px] md:text-[16px] lg:text-[21px] lg:leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signup signupLink'
+                    onClick={signInWithGoogle}
+                  >
                     Sign up as a freelance partner
                   </button>
                 </div>
