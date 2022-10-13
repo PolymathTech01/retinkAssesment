@@ -1,0 +1,22 @@
+:root {
+  --transition: all 400ms ease;
+}
+.btn {
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid #7e1cfe;
+  color: #7e1cfe;
+}
+
+.signup:hover {
+  background-color: #7e1cfe;
+  border: none;
+}
+.signupLink {
+  transition: var(--transition);
+}
+.signupLink:hover {
+  color: white;
+}

@@ -9,9 +9,7 @@ const Hero = () => {
         <img
           src={videoScreenshot}
           alt='Video screenshot'
-          width='737'
-          height='415'
-          className='mx-auto'
+          className='mx-auto sm:w-[500px] sm:h-[270px] md:w-[737px] md:h-[390px]'
         />
       </section>
     </div>

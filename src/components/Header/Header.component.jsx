@@ -3,8 +3,8 @@ import retink from '../../Assets/Retink.svg';
 import retinkAvater from '../../Assets/Retink-avatar.svg';
 const Header = () => {
   return (
-    <div className='' style={{ backgroundColor: 'rgba(126, 28, 254, 0.05' }}>
-      <div className='flex sm:flex-row flex-col ml-[153px] pt-[61.25px]'>
+    <div style={{ backgroundColor: 'rgba(126, 28, 254, 0.05)' }}>
+      <div className='flex flex-wrap lg:ml-[153px] sm:mx-auto sm:max-w-md md:mx-auto md:max-w-lg lg:mx-0 lg:max-w-none pt-[61.25px]'>
         <div className=' flex flex-col'>
           <div className='logos flex '>
             <img
@@ -34,49 +34,47 @@ const Header = () => {
               </span>
             </p>
           </div>
-          <div id='action' className='mt-[50px] mb-[118.81px]'>
-            <h3 className='text-[#7E1CFE] font-[700] text-[24px] leading-[41px]'>
+          <div id='action' className='lg:mt-[50px] lg:mb-[118.81px]'>
+            <h3 className='text-[#7E1CFE] font-[700] text-[24px] leading-[41px] md:text-center lg:text-left'>
               Sign Up For The BETA!
             </h3>
             <div id='beta' className='mt-[15px]'>
               <form>
                 <input
-                  className=' focus:outline-none border-x-0  border-b-[1px] border-[#000000] placeholder:italic placeholder:text-center placeholder:text-[#7E1CFE] placeholder:font-[300] placeholder:text-[15px] placeholder:leading-[26px] placeholder:bg-[#F5F5F5] bg-[#F5F5F5] text-center'
+                  className=' focus:outline-none border-x-0  border-b-[1px] border-[#000000] placeholder:italic placeholder:text-center placeholder:text-[#7E1CFE] placeholder:font-[300] placeholder:text-[15px] placeholder:leading-[26px] input-color bg-inherit text-center'
                   type='text'
                   placeholder='Business Name'
                 />
                 <span>would like a beta invite to</span>
                 <input
-                  className=' focus:outline-none border-x-0  border-b-[1px] border-[#000000] placeholder:italic placeholder:text-center placeholder:text-[#7E1CFE] placeholder:font-[300] placeholder:text-[15px] placeholder:leading-[26px] placeholder:bg-[#F5F5F5] bg-[#F5F5F5] text-center'
+                  className=' focus:outline-none border-x-0  border-b-[1px] border-[#000000] placeholder:italic placeholder:text-center placeholder:text-[#7E1CFE] placeholder:font-[300] placeholder:text-[15px] placeholder:leading-[26px] bg-inherit text-center'
                   type='text'
                   placeholder='@email address'
                 />
                 <span>when it's ready!</span>
                 <div
                   id='buttons'
-                  className='flex justify-between max-w-3xl mt-[36px]'
+                  className='flex md:justify-center lg:justify-between lg:max-w-3xl mt-[36px]'
                 >
                   <button
                     type='submit'
-                    className='bg-[#7E1CFE] text-white px-[85px] rounded-3xl py-5 font-[500] text-[21px] leading-[34px]'
+                    className='bg-[#7E1CFE] text-white md:px-[15px] sm:px-[45px] lg:px-[85px]  rounded-3xl md:py-2 sm:py-2 lg:py-5 font-[500] sm:text-[16px] md:text-[11px] lg:text-[21px] leading-[34px] md:mr-8 lg:mr-0 md:w-28 lg:w-fit btn'
                   >
                     Notify me
                   </button>
-                  <button className='border-[#7E1CFE] border-2 px-[50px] rounded-3xl py-3'>
-                    <a
-                      href='https://retink.io/fap'
-                      target='__blank'
-                      className=' font-[500] text-[21px] leading-[34px] text-[#0085FF] decoration-[#0085FF] underline'
-                    >
-                      Sign up as a freelance partner
-                    </a>
+                  <button className='border-[#7E1CFE] border-2 sm:px-[12px] sm:ml-3 md:ml-0 md:px-[20px] lg:px-[50px] rounded-3xl lg:py-3 font-[500] sm:text-[13px] md:text-[16px] lg:text-[21px] lg:leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signup signupLink'>
+                    Sign up as a freelance partner
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <img src={retinkAvater} alt='retinkAvater' className='relative' />
+        <img
+          src={retinkAvater}
+          alt='retinkAvater'
+          className='sm:hidden md:hidden lg:block lg:mx-auto'
+        />
       </div>
     </div>
   );

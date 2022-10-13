@@ -20,19 +20,13 @@ const Signup = () => {
       <div className='ml-8 text-center pb-7'>
         <button
           type='submit'
-          className='notify bg-[#7E1CFE] px-[63px] pt-[12px] pb-[12px] text-white rounded-2xl font-[500] text-[20px] leading-[34px]'
+          className='notify bg-[#7E1CFE] px-[63px] pt-[12px] pb-[12px] text-white rounded-2xl font-[500] text-[20px] leading-[34px] btn'
         >
           Notify me
         </button>
         <br />
-        <button className='border-[#7E1CFE] border-2 px-[50px] rounded-3xl mt-[40px] py-5'>
-          <a
-            href='https://retink.io/fap'
-            target='__blank'
-            className=' font-[500] text-[21px] leading-[34px] text-[#0085FF] decoration-[#0085FF] underline'
-          >
-            Sign up as a freelance partner
-          </a>
+        <button className='border-[#7E1CFE] border-2 px-[50px] rounded-3xl mt-[40px] py-5 signup font-[500] text-[21px] leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signupLink'>
+          Sign up as a freelance partner
         </button>
       </div>
     </div>
