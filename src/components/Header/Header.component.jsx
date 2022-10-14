@@ -3,9 +3,14 @@ import retink from '../../Assets/Retink.svg';
 import retinkAvater from '../../Assets/Retink-avatar.svg';
 import { signInWithGooglePopup } from '../../Utils/Firebase/Firebase.utils';
 const Header = () => {
-  const signInWithGoogle = async () => {
-    const response = await signInWithGooglePopup();
-    console.log('respn', response);
+  const signInWithGoogle = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await signInWithGooglePopup();
+      console.log('respn', response);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div style={{ backgroundColor: 'rgba(126, 28, 254, 0.05)' }}>
@@ -44,7 +49,7 @@ const Header = () => {
               Sign Up For The BETA!
             </h3>
             <div id='beta' className='mt-[15px]'>
-              <form>
+              <form onSubmit={signInWithGoogle}>
                 <input
                   className=' focus:outline-none border-x-0  border-b-[1px] border-[#000000] placeholder:italic placeholder:text-center placeholder:text-[#7E1CFE] placeholder:font-[300] placeholder:text-[15px] placeholder:leading-[26px] input-color bg-inherit text-center'
                   type='text'
@@ -62,16 +67,12 @@ const Header = () => {
                   className='flex md:justify-center lg:justify-between lg:max-w-3xl mt-[36px]'
                 >
                   <button
-                    type='submit'
+                    type='button'
                     className='bg-[#7E1CFE] text-white md:px-[15px] sm:px-[45px] lg:px-[85px]  rounded-3xl md:py-2 sm:py-2 lg:py-5 font-[500] sm:text-[16px] md:text-[11px] lg:text-[21px] leading-[34px] md:mr-8 lg:mr-0 md:w-28 lg:w-fit btn'
-                    onClick={signInWithGoogle}
                   >
                     Notify me
                   </button>
-                  <button
-                    className='border-[#7E1CFE] border-2 sm:px-[12px] sm:ml-3 md:ml-0 md:px-[20px] lg:px-[50px] rounded-3xl lg:py-3 font-[500] sm:text-[13px] md:text-[16px] lg:text-[21px] lg:leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signup signupLink'
-                    onClick={signInWithGoogle}
-                  >
+                  <button className='border-[#7E1CFE] border-2 sm:px-[12px] sm:ml-3 md:ml-0 md:px-[20px] lg:px-[50px] rounded-3xl lg:py-3 font-[500] sm:text-[13px] md:text-[16px] lg:text-[21px] lg:leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signup signupLink'>
                     Sign up as a freelance partner
                   </button>
                 </div>
