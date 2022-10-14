@@ -1,5 +1,14 @@
+import { signInWithGooglePopup } from '../../Utils/Firebase/Firebase.utils';
 import './signup.css';
 const Signup = () => {
+  const signInWithGoogle = async (e) => {
+    try {
+      const response = await signInWithGooglePopup();
+      console.log('respn', response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className='pt-36 bg-[#F5F5F5] pb-32'>
       <h3 className='text-[#7E1CFE] font-[600] text-[30px]  leading-[41px] text-center'>
@@ -25,7 +34,10 @@ const Signup = () => {
           Notify me
         </button>
         <br />
-        <button className='border-[#7E1CFE] border-2 px-[50px] rounded-3xl mt-[40px] py-5 signup font-[500] text-[21px] leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signupLink'>
+        <button
+          className='border-[#7E1CFE] border-2 px-[50px] rounded-3xl mt-[40px] py-5 signup font-[500] text-[21px] leading-[34px] text-[#0085FF] decoration-[#0085FF] underline signupLink'
+          onClick={signInWithGoogle}
+        >
           Sign up as a freelance partner
         </button>
       </div>
